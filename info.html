@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Information - My Store</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    
+    <h1>Order Information</h1>
+    <p>Please enter your details to complete your order:</p>
+    
+    <div id="productInfo"></div>
+    
+    <form id="orderForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" required><br>
+        <label for="phone">Phone Number:</label>
+        <input type="text" id="phone" required><br>
+        <label for="address">Address:</label>
+        <input type="text" id="address" required><br>
+        <button type="submit">Submit Order</button>
+    </form>
+
+    <script>
+        // Parse URL parameters
+        const urlParams = new URLSearchParams(window.location.search);
+        const product = urlParams.get('product');
+        const price = urlParams.get('price');
+        
+        // Display product info
+        document.getElementById('productInfo').innerText = `You are ordering: ${product} for $${price}`;
+
+        document.getElementById('orderForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('Order submitted successfully!');
+            // Additional order handling logic can be added here
+        });
+    </script>
+</body>
+</html>
