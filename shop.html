@@ -5,40 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shop - My Store</title>
     <link rel="stylesheet" href="styles.css">
-    <style>
-        .product {
-            cursor: pointer; /* Change cursor to indicate it's clickable */
-            border: 1px solid #ccc; /* Optional styling */
-            padding: 10px; /* Optional styling */
-            margin: 10px; /* Optional styling */
-            display: inline-block; /* Optional styling */
-        }
-    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <nav>
+        <div class="logo">My Store</div>
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="shop.html">Shop</a></li>
             <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
     
-    <h1>Our Products</h1>
-    <p>Check out our amazing products below!</p>
-    
-    <section>
+    <header>
+        <h1>Our Products</h1>
+        <p>Check out our amazing products below!</p>
+    </header>
+
+    <section class="product-grid">
         <div class="product" onclick="location.href='info.html?product=Product 1&price=19.99'">
             <h3>Product 1</h3>
-            <img src="product1.jpg" alt="Product 1" style="width: 200px;">
-            <p>Price: $19.99</p>
+            <img src="img/13.webp" alt="Product 1">
+            <p>Price: $29.99</p>
         </div>
         <div class="product" onclick="location.href='info.html?product=Product 2&price=29.99'">
             <h3>Product 2</h3>
-            <img src="product2.jpg" alt="Product 2" style="width: 200px;">
-            <p>Price: $29.99</p>
+            <img src="img/12.avif" alt="Product 2">
+            <p>Price: $39.99</p>
+        </div>
+        <div class="product" onclick="location.href='info.html?product=Product 3&price=39.99'">
+            <h3>Product 3</h3>
+            <img src="img/14.webp" alt="Product 3">
+            <p> Price: $29.99</p>
         </div>
     </section>
+
+    <footer>
+        <p>&copy; 2024 My Store. All rights reserved.</p>
+        <div>
+            <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+        </div>
+    </footer>
 </body>
 </html>
